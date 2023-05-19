@@ -65,7 +65,7 @@ public class TestPoly {
 
         // Pointing to Person instances
         p1 = new Person ("George", "345-45-3456");
-        p2 = new Person ("Ringo", "456=45-4567");
+        p2 = new Person ("Ringo", "456-45-4567");
 
         // Pointing to subclass instances
         p3 = c;
