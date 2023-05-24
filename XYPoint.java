@@ -1,12 +1,12 @@
-public class XYPoint {
+public class XYPoint extends XYThing {
 
     double x, y;
-    String label;
+    //String label;
 
     public XYPoint (double initX, double initY)
     {
         x = initX; y = initY;
-        label = "";
+        label = ""; // B/c this is inherited from XYThing, can it just be commented out?
     }
 
     public XYPoint (double initX, double initY, String initLabel)
@@ -25,11 +25,13 @@ public class XYPoint {
         return Math.sqrt ( (x-other.x)*(x-other.x) + (y-other.y)*(y-other.y) );
     }
 
+    // Overriding XYThing's draw()
     public void draw ()
     {
         DrawTool.drawPoint (x, y);
     }
 
+    // Overriding XYThing's drawWithLabel()
     public void drawWithLabel ()
     {
         draw ();
