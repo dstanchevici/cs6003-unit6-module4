@@ -5,7 +5,7 @@ public class XYLine extends XYThing {
     public XYLine(XYPoint start, XYPoint end) {
         this.start = start;
         this.end = end;
-        //label = ""; // Try commenting out b/c it's inherited from XYThing
+        label = "";
     }
 
     public XYLine(XYPoint start, XYPoint end, String label) {
@@ -30,5 +30,14 @@ public class XYLine extends XYThing {
         draw(); // This is the draw() here in XYLine
         // Draw label at midpoint
         DrawTool.drawLabel((start.x + end.x)/2, (start.y + end.y)/2, label);
+    }
+
+    public void computeBounds ()
+    {
+        minX = (start.x <= end.x)? start.x: end.x;
+        maxX = (start.x > end.x)? start.x: end.x;
+        minY = (start.y <= end.y)? start.y: end.y;
+        maxY = (start.y > end.y)? start.y: end.y;
+
     }
 } // end class

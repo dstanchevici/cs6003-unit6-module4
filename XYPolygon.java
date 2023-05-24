@@ -46,4 +46,28 @@ public class XYPolygon extends XYThing {
         XYPoint p = points.get (0);
         DrawTool.drawLabel (p.x-0.2, p.y-0.4, label);
     }
+
+    public void computeBounds ()
+    {
+        minX = maxX = points.get(0).x;
+        minY = maxY = points.get(0).y;
+
+        for (XYPoint p: points) {
+            // x
+            if (p.x < minX) {
+                minX = p.x;
+            }
+            if (p.x > maxX) {
+                maxX = p.x;
+            }
+
+            // y
+            if (p.y < minY) {
+                minY = p.y;
+            }
+            if (p.y > maxY) {
+                maxY = p.y;
+            }
+        }
+    } // end computeBounds()
 } // end class

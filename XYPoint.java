@@ -1,12 +1,11 @@
 public class XYPoint extends XYThing {
 
     double x, y;
-    //String label;
 
     public XYPoint (double initX, double initY)
     {
         x = initX; y = initY;
-        label = ""; // B/c this is inherited from XYThing, can it just be commented out?
+        label = "";
     }
 
     public XYPoint (double initX, double initY, String initLabel)
@@ -36,5 +35,12 @@ public class XYPoint extends XYThing {
     {
         draw ();
         DrawTool.drawLabel (x-0.2, y-0.4, label);
+    }
+
+    public void computeBounds ()
+    {
+        // Bounds for a single point
+        minX = maxX = x;
+        minY = maxY = y;
     }
 } // end of "XYPoint" class
