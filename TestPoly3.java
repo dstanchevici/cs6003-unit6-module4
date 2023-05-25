@@ -1,4 +1,21 @@
-class Customer425 extends Person {
+class Person425 {
+
+    String name;
+    String ssn;
+
+    // Constructors
+    public Person425 (String nameIn, String ssnIn) {
+        name = nameIn;
+        ssn = ssnIn;
+    }
+
+    // Forced to add this
+    public Person425 ()
+    {
+    }
+}
+
+class Customer425 extends Person425 {
 
     int loyalty;
 
@@ -13,9 +30,9 @@ public class TestPoly3 {
     public static void main (String[] argv)
     {
         Customer425 c = new Customer425 ("Zoe", "ssn: 123", 5);
-        Person p = new Person ("Gus", "ssn: 456");
+        Person425 p = new Person425 ("Gus", "ssn: 456");
 
-        Person p2 = c;
+        Person425 p2 = c;
         Customer425 c2 = (Customer425) p2;
 
         Customer425 c3 = (Customer425) p;
