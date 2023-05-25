@@ -4,8 +4,10 @@ public class XYPoint extends XYThing {
 
     public XYPoint (double initX, double initY)
     {
-        x = initX; y = initY;
-        label = "";
+        //x = initX; y = initY;
+        //label = "";
+
+        this (initX, initY, "");
     }
 
     public XYPoint (double initX, double initY, String initLabel)

@@ -3,9 +3,11 @@ public class XYLine extends XYThing {
     XYPoint start, end;
 
     public XYLine(XYPoint start, XYPoint end) {
-        this.start = start;
-        this.end = end;
-        label = "";
+        //this.start = start;
+        //this.end = end;
+        //label = "";
+
+        this (start, end, "");
     }
 
     public XYLine(XYPoint start, XYPoint end, String label) {
