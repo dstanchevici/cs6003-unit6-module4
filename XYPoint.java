@@ -10,10 +10,10 @@ public class XYPoint extends XYThing {
         this (initX, initY, "");
     }
 
-    public XYPoint (double initX, double initY, String initLabel)
+    public XYPoint (double x, double y, String label)
     {
-        x = initX; y = initY;
-        label = initLabel;
+        this.x = x; this.y = y;
+        this.label = label;
     }
 
     public String toString ()
