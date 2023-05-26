@@ -9,6 +9,8 @@ public class Person {
         name = nameIn; ssn = ssnIn;
     }
 
+    // Note: The superclass has to have a no-parameter constructor
+    // b/c a super() (a no-parameter constructor call) is inserted in the subclass by default.
     public Person ()
     {
         name = ssn = "Not intialized";
